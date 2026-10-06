@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "cpf": "086.476.758-05",
+        "nome": "Ivone produtos"
+    },
+    {
+        "id": 2,
+        "cpf": "123.456.000-01",
+        "nome": "antonieta cavalcante"
+    },
+    {
+        "id": 3,
+        "cpf": "123.489.111-02",
+        "nome": "wagner Silva"
+    }
+]
