@@ -3,27 +3,27 @@
         "id": 1,
         "cliente_id": 1,
         "produto": "Chia",
-        "preco": 30,
+        "preco": 35,
         "quantidade": 2
     },
     {
         "id": 2,
         "cliente_id": 1,
-        "produto": "Psyllium",
-        "preco": 45,
+        "produto": "romã",
+        "preco": 50,
         "quantidade": 2
     },
     {
         "id": 3,
         "cliente_id": 2,
-        "produto": "Chia",
+        "produto": "abobra",
         "preco": 30,
         "quantidade": 1
     },
     {
         "id": 4,
         "cliente_id": 3,
-        "produto": "Psyllium",
+        "produto": "xumixury",
         "preco": 45,
         "quantidade": 3
     }

@@ -1,9 +1,10 @@
-const clientes = require("../../dados/clientes.json")
+const clientes = require("../../dados/clientes.json") 
+
 
 const listar = (req, res) => {
     res.json(clientes);
-    res.json(pedidos);
-};
+    
+}
 
 const criar = (req, res) => {
     const dados = req.body;
@@ -15,16 +16,19 @@ const criar = (req, res) => {
 const alterar = (req, res) => { 
     const id = req.params.id;
     const cliente = clientes.find(c => c.id == id);
-};
 
+
+};
 
 const excluir = (req, res) => { 
     const id = req.params.id;
-    const index = clientes.findLastIndex(c => c.id == id);
+    const dados = req.body;
 
-    if (clie)
+    const p = clientes.find(p => p.id == id);
 
- };
+    if (!p) 
+
+};
 
 
 module.exports = {

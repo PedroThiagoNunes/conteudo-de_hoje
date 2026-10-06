@@ -1,15 +1,16 @@
 const pedidos = require('../../dados/pedidos.json');
 
-const listar = (req,res) => {
-    subtotais();
-    res.json(pedidos);
-};
-
-function subtotais() {
+function calctotal() {
     pedidos.forEach(p => {
-        p.subtotais = p.quantidade * p.preco;
+        p.calctotais = p.quantidade * p.preco;
+        
     });
 }
+
+const listar = (req,res) => {
+    calctotal();
+    res.json(pedidos);
+};
 
 const criar = (req, res) => {
     const dados = req.body;
@@ -18,10 +19,36 @@ const criar = (req, res) => {
     res.status(201).json(dados);
 };
 
-const alterar = (req,res) => { res.json("Em construção") };
-const excluir = (req,res) => { res.json("Em construção") };
-const subtotal = (req,res) => { res.json("Em construção") };
+const alterar = (req,res) => { 
+    const id = req.params.id;
+    const dados = req.body;
+
+    const p = pedidos.find(p => p.id == id);
+    if (!p) {
+        return res.status(404).send("Pedido não encontrado!");
+    }
+    
+    p.id = Number(id);
+    p.cpf = dados.cpf;
+    p.nome = dados.nome;
+
+    res.send("cliente alterado com sucesso!")
+};
+
+const excluir = (req,res) => {
+
+    const id = req.params.id;
+    const indice = pedidos.findLastIndex(p => p.id == id);
+    if (indice === -1) {
+        return res.status(404).send("pedido não encontrado!");
+    }
+    pedidos.splice(indice, 1);
+    res.send("Pedido excluído com sucesso!");
+};
+
+
+
 
 module.exports = {
-    criar, listar, alterar, excluir, subtotal
+    criar, listar, alterar, excluir, 
 }
