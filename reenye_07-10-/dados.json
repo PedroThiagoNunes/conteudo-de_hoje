@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "name":"jeff obezo",
+        "email":"jeffobezo01@gmail.com",
+        "telefone":"(11) 99999-9999",
+        "senha":"123456"
+    },
+    {
+        "id":2,
+        "name":"Rita lee",
+        "email":"ritaleeausurpadora@gmail.com",
+        "telefone":"(11) 88888-8888",
+        "senha":"654321"
+    },
+    {
+        "id":3,
+        "name":"Goleiro bruno",
+        "email":"goleirobrunojogapracachorro@gmail.com",
+        "telefone":"(11) 77777-7777",
+        "senha":"987654"
+    }
+]
